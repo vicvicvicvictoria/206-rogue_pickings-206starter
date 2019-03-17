@@ -12,10 +12,7 @@ body {
 }
 
 .container{
-	max-width: 100%;
 	margin: 0 auto;
-	display: flex;
-	justify-content: center;
 }
 
 h1,
@@ -50,7 +47,6 @@ header {
 	height: 110px;
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
-	display: flex;
 }
 
 header h1 {
@@ -88,7 +84,6 @@ header nav ul li a{
 	margin: 0 auto;
 	clear: both;
 	width: 100%;
-	display: flex;
 }
 
 .main-image {
@@ -121,13 +116,11 @@ header nav ul li a{
 	height: auto;
 	border-top: 1px solid #eee;
 	display: flex;
-	justify-content:
-	align-items: flex-start;
+	justify-content: center;
+	flex-flow: column wrap;
 }
 
 .section-one h4 {
-	padding: 10px 0;
-	width: 100%;
 }
 
 .section-two {
@@ -137,8 +130,6 @@ header nav ul li a{
 
 .section-two h4,
 .section-three h4 {
-	padding: 10px 30px;
-	width: 100%;
 }
 
 .menu {
@@ -174,4 +165,35 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .9em;
+}
+
+@media all and (min-width:768px) {
+	.container {
+				max-width: 1200px;
+				width: 90%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: row wrap;
+}/* Tablet styles here */
+
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+		.section-one h4 {
+			padding: 10px 0;
+			width: 30%;
+		}
+
+		.section-two {
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+		}
+
+		.section-two h4,
+		.section-three h4 {
+			padding: 10px 30px;
+			width: 30%;
+		}
 }
